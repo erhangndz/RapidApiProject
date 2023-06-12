@@ -1,0 +1,29 @@
+﻿@model List<ExchangeViewModel.Exchange_Rates>
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    int count = 0;
+}
+
+<link href="~/lib/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet" />
+<table class="table table-bordered">
+    <tr>
+        <th>#</th>
+        <th>Döviz Adı</th>
+        <th>Döviz Tutarı</th>
+       
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        count++;
+        <tr>
+            <td>@count</td>
+            <td>@item.currency</td>
+            <td>@item.exchange_rate_buy</td>
+        
+        </tr>
+    }
+
+</table>
+

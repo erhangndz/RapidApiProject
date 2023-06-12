@@ -1,0 +1,20 @@
+﻿@model CurrencyViewModel
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<form method="post">
+    <label>Miktari Girin:</label> <input type="number" name="old_amount" class="form-control"/>
+    <br />
+
+    <label>Hangi Kurdan:</label> <input type="text" name="old_currency" class="form-control" />
+    <br />
+    <label>Hangi Kura:</label> <input type="text" name="new_currency" class="form-control" />
+    <br />
+    <label>Sonuç:</label> <input type="text" name="new_amount" class="form-control" />
+    <br />
+    <button class="btn btn-outline-dark">Dönüştür</button>
+
+</form>
+

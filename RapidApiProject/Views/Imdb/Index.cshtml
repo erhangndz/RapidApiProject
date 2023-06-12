@@ -1,0 +1,27 @@
+﻿@model List<ImdbListViewModel>
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<link href="~/lib/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet" />
+<table class="table table-bordered">
+    <tr>
+        <th>#</th>
+        <th>Başlık</th>
+        <th>Imdb Puanı</th>
+        <th>Fragman Linki</th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>@item.rank</td>
+            <td>@item.title</td>
+            <td>@item.rating</td>
+            <td><a href="@item.trailer" target="_blank" class="btn btn-outline-danger">Fragmanı İzle</a> </td>
+        </tr>
+    }
+
+</table>
+
